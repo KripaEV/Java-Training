@@ -28,23 +28,16 @@ public class StudentMain {
 		}
 		
 		Collections.reverse(studentList);
-		for(int i=0;i<n;i++) {
-			System.out.println(studentList.get(i).getRollno()+":"+studentList.get(i).getName());
-		}
-		
 
-		TreeSet<Student> set=new TreeSet<Student>(studentList);
-		set.addAll(studentList);
-		
-		Iterator<Student> ascSortIterator=set.iterator();
+
+		TreeSet<Student> revTreeList=new TreeSet<Student>(new CompareRollno());
+		revTreeList.addAll(studentList);
 		
 		System.out.println("The tree set sorted in descending order:");
-		while(ascSortIterator.hasNext()) {
-			System.out.println(ascSortIterator.next());
-		}
 
-	}
-	
-	
+		for(Student stud:revTreeList) {
+			System.out.println(stud.getRollno()+":"+stud.getName());
+		}
+	}	
 
 }
