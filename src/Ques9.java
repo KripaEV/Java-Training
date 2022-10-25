@@ -39,10 +39,10 @@ public class Ques9 {
 			System.out.println("Weird");
 		}
 		else {
-			if() {
+			if(num<0) {//not real 
 				System.out.println("Not weird");
 			}
-			else if() {
+			else if(num>0) {// not real
 				System.out.println("Weird");
 			}
 			else {
